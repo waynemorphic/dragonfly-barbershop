@@ -1,0 +1,24 @@
+.home {
+    display: flex;
+    max-width: 1200px;
+}
+
+.home .home-page {
+    text-align: left;
+    max-width: 600px;
+}
+
+.home-page h3 {
+    font-size: 2rem;
+
+    
+}
+
+.home .home-page-image {
+    max-width: 600px;
+    width: 600px;
+}
+
+.home .home-page-image img {
+    max-width: 600px;
+}
