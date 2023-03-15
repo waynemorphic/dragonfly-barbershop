@@ -1,0 +1,16 @@
+.carousel-images{
+    width: 500px;
+}
+
+img{
+    border-radius: 20px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+/* media queries */
+@media screen and (max-width: 600px){
+    .carousel-images{
+        width: 372px;
+    }
+}
