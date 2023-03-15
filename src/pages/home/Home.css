@@ -1,24 +1,173 @@
 .home {
     display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 50px;
     max-width: 1200px;
+    flex-direction: row;
 }
 
 .home .home-page {
     text-align: left;
     max-width: 600px;
-}
-
-.home-page h3 {
-    font-size: 2rem;
-
     
 }
 
-.home .home-page-image {
-    max-width: 600px;
-    width: 600px;
+/* homepage heading */
+.home-page h3 {
+    color: black;
+    font-size: 4rem;
+    
 }
 
-.home .home-page-image img {
-    max-width: 600px;
+/* heading spanned word */
+.home-page h3 span {
+    color: #0FA98D;
+    font-family: cursive;
 }
+
+/* shop objective */
+.objective {
+    color: black;
+    font-size: 1.1rem;
+    line-height: 30px;
+}
+
+
+/* buttons styling || booking and watch video */
+.booking-button {
+    background-color: #0FA98D;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    padding: 0.6em 1.2em;
+    margin-right: 50px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+
+.booking-button:hover {
+    border-color: orange;
+}
+
+/* details on barbershop */
+.details {
+    display: flex;
+    align-items: baseline;
+    color: black;    
+}
+
+/* details spanned word */
+.details span{
+    color: #0FA98D;
+    font-size: 2rem;    
+}
+
+/* details headings */
+.details h4 {
+    padding: 10px;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+.lines {
+    border-left-style: groove;
+    border-left-width: 2px;
+    margin: 5px;
+}
+/* styling the image */
+.home .home-page-image {
+    background-color: #7E7F81;
+    /* transform: rotate(10deg); */
+    border-radius: 150px;
+    border-top-right-radius: 100px;
+    width: 200px;
+}
+
+/* styling image to achieve a stacked images effect */
+.home-page-image .stack {
+    float: left;
+    width: 450px;
+    height: auto;
+    margin: 10px;
+     
+
+}
+
+
+/* media queries */
+@media screen and (max-width: 600px){
+    .home {
+        display: flex;
+        margin: auto;
+        padding: auto;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .home .home-page {
+        text-align: left;
+        letter-spacing: 0.3px;
+        word-spacing: 0.3px;
+        line-break: auto;
+        max-width: 400px;
+        flex-direction: row;
+    }
+
+    /* homepage heading */
+    .home-page h3 {        
+        font-size: 3rem;
+    }
+
+    /* homepage heading spanned word */
+    .home-page h3 span {
+        color: #0FA98D;
+        font-family: cursive;
+        margin-left: 9px;
+    }
+
+    /* details on barbershop */
+    .details {
+        display: flex;
+        align-items: center;
+        color: black;
+        margin-top: 20px;
+        margin-bottom: 20px;        
+    }
+
+    /* details spanned word */
+    .details span{
+        color: #0FA98D;
+        font-size: 1.2rem;
+    }
+
+    /* details headings */
+    .details h4 {
+        flex-direction: column;
+        align-self: center;
+        font-size: 0.8rem;
+    }
+
+    /* image */
+    .home-page .home-page-image .stack {
+        display: flex;
+        flex-direction: row;           
+    
+    }
+
+        /* styling the image */
+    .home .home-page-image {
+        max-width: 300px;
+        width: 300px; 
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* booking and video button gap */
+    .booking-button {
+        margin-right: 40px;
+    }
+  }
