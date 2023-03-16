@@ -5,6 +5,8 @@
     margin: 50px;
     max-width: 1200px;
     flex-direction: row;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
 }
 
 .home .home-page {
