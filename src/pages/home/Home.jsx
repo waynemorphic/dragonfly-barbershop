@@ -2,10 +2,13 @@ import React from 'react'
 import '../home/Home.css'
 import barbercut from '../../assets/barbercut.png'
 import ImagesCarousel from '../../components/bootstrap/ImagesCarousel'
+import NavBar from '../navbar/NavBar'
 
 export default function Home() {
   return (
-    <div className='home'>
+    <div>
+      <NavBar />
+      <div className='home'>      
         <div className='home-page'>
             <h3>Find The Best<br /> Barber Shop <span><br />for you</span></h3>
             <p className='objective'>Haircut Services For Men and Women. We will pamper your Hair, Scalp,
@@ -25,10 +28,11 @@ export default function Home() {
         <div>
           <ImagesCarousel />
         </div>
-        {/* <div className='home-page-image'>
-            <img className='stack' src = {barbercut} alt='Mike Murikui image'/>            
-            <img className='stack' src = {barbercut} alt='Mike Murikui image'/> 
-        </div>                 */}
+          {/* <div className='home-page-image'>
+              <img className='stack' src = {barbercut} alt='Mike Murikui image'/>            
+              <img className='stack' src = {barbercut} alt='Mike Murikui image'/> 
+          </div>                 */}
+      </div>
     </div>
   )
 }
