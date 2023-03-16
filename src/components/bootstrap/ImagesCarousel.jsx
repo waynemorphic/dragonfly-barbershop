@@ -16,17 +16,14 @@ export default function ImagesCarousel() {
 
         <Carousel.Item>
             <img className = "d-block w-100" src={shop} alt="barber shop image 2"/>
-            <Carousel.Caption>
-                <h3>Second Caption</h3>
-                <p>lorem ipsum do set</p>
+            <Carousel.Caption>                
             </Carousel.Caption>
         </Carousel.Item>
 
         <Carousel.Item>
             <img className = "d-block w-100" src={barbercut} alt="barber shop image 3"/>
             <Carousel.Caption>
-                <h3>Third Caption</h3>
-                <p>lorem ipsum do set marcus garvey</p>
+                
             </Carousel.Caption>
         </Carousel.Item>
     </Carousel>

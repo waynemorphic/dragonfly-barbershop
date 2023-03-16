@@ -1,11 +1,11 @@
-.carousel-images{
+.carousel-images {
     width: 500px;
 }
 
 img{
-    border-radius: 20px;
-    border-top-left-radius: 50px;
-    border-bottom-right-radius: 50px;
+    border-radius: 30px;
+    border-top-left-radius: 60px;
+    border-bottom-right-radius: 60px;
 }
 
 /* media queries */
