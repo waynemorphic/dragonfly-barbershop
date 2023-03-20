@@ -1,0 +1,97 @@
+/* container for elements */
+.container-alignment {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding: 10px;
+}
+
+/* menu button scroller/navigator */
+.navigation {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;        
+}
+
+/* labels element */
+label {
+    margin: 10px;
+    padding: 10px;
+    border-bottom-width: 1px;
+    border-bottom-style: groove;
+    border-bottom-color: gray;
+}
+
+/* labels and input elements for sizes: radio & gaps */
+label input {
+    padding: 0px;
+    margin: 10px;
+    border-radius: 50px;
+    transform: scale(2);
+    margin-bottom: 15px;
+    background-color: #0FA98D;
+}
+
+/* navigator buttons */
+button {
+    background-color: white;
+    border: transparent;
+    text-align: left;
+    margin: 15px; 
+    padding: 10px;
+}
+
+button:hover {
+    color: white;
+    background-color: #0FA98D;
+    border-radius: 20px;
+    border: 2px solid orange;
+}
+
+/* general class for all forms with radio buttons */
+.selection {
+    display: flex;
+    flex-direction: column;
+}
+
+/* span element for prices */
+span {
+    font-weight: bold;
+    float: inline-end;
+    /* display: flex; */
+    /* align-self: flex-end;
+    align-content: flex-end;
+    justify-self: flex-end; */
+}
+
+/* media query for small screens */
+@media screen and (max-width:600px) {
+    .container-alignment {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        margin-right: 15px;    
+        margin-left: 0px;
+    }
+    
+    /* navigator buttons */
+    .navigation button {
+        /* background-color: white; */
+        /* border: transparent; */
+        text-align: center;
+        color: white;
+        padding: 10px;
+        background-color: #0FA98D;
+        border-radius: 20px;
+        /* border: 2px solid orange; */
+    }
+    
+    
+}

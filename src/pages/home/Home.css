@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 .home {
     display: flex;
     align-items: center;
@@ -19,13 +21,13 @@
 .home-page h3 {
     color: black;
     font-size: 4rem;
-    
+    font-family: 'Quicksand', sans-serif;
 }
 
 /* heading spanned word */
 .home-page h3 span {
     color: #0FA98D;
-    font-family: cursive;
+    font-family: 'Cookie', cursive;
 }
 
 /* shop objective */
@@ -127,7 +129,7 @@
     /* homepage heading spanned word */
     .home-page h3 span {
         color: #0FA98D;
-        font-family: cursive;
+        font-family: 'Cookie', cursive;
         margin-left: 9px;
     }
 
