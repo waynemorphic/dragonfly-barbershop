@@ -53,9 +53,7 @@
     transition: border-color 0.25s;
 }
 
-.booking-button:hover {
-    border-color: orange;
-}
+
 
 /* details on barbershop */
 .details {
@@ -96,9 +94,7 @@
     float: left;
     width: 450px;
     height: auto;
-    margin: 10px;
-     
-
+    margin: 10px;    
 }
 
 
