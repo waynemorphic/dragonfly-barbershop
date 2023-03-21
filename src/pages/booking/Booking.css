@@ -4,6 +4,10 @@
     flex-direction: row;
     margin: 10px;
     padding: 10px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    max-width: 1200px;
+    font-size: 1.1rem;
+    gap: 10px;
 }
 
 /* menu button scroller/navigator */
@@ -13,13 +17,19 @@
     margin: 20px;        
 }
 
+/* headings */
+.container-alignment h3 {
+    margin-left: 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+
 /* labels element */
 label {
     margin: 10px;
     padding: 10px;
     border-bottom-width: 1px;
     border-bottom-style: groove;
-    border-bottom-color: gray;
+    border-bottom-color: gray;    
 }
 
 /* labels and input elements for sizes: radio & gaps */
@@ -29,7 +39,6 @@ label input {
     border-radius: 50px;
     transform: scale(2);
     margin-bottom: 15px;
-    background-color: #0FA98D;
 }
 
 /* navigator buttons */
@@ -37,31 +46,33 @@ button {
     background-color: white;
     border: transparent;
     text-align: left;
-    margin: 15px; 
+    margin: 5px; 
     padding: 10px;
 }
 
 button:hover {
     color: white;
     background-color: #0FA98D;
-    border-radius: 20px;
-    border: 2px solid orange;
+    border-radius: 50px;
 }
 
 /* general class for all forms with radio buttons */
 .selection {
     display: flex;
     flex-direction: column;
+    max-width: 600px;
+    margin-left: 10px;
 }
 
 /* span element for prices */
-span {
+.selection span {
     font-weight: bold;
     float: inline-end;
-    /* display: flex; */
-    /* align-self: flex-end;
-    align-content: flex-end;
-    justify-self: flex-end; */
+}
+
+/* muted color for time */
+.time {
+    color: gray;
 }
 
 /* media query for small screens */
@@ -83,14 +94,11 @@ span {
     
     /* navigator buttons */
     .navigation button {
-        /* background-color: white; */
-        /* border: transparent; */
         text-align: center;
         color: white;
         padding: 10px;
         background-color: #0FA98D;
         border-radius: 20px;
-        /* border: 2px solid orange; */
     }
     
     
