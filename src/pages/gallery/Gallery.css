@@ -1,0 +1,126 @@
+@media screen and (min-width: 600px) {
+    .card-container {
+        display: flex;
+        flex-direction: row;
+        margin: 20px;
+        padding: auto;
+        width: 100%;
+    }
+    
+    /* styling each image in the gallery page */
+    .image-1 {
+        width: 20%;
+        margin: 20px;
+        border-top-left-radius: 100px;
+    }
+    
+    .image-2 {
+        width: 20%;
+        margin: 20px;
+        border-top-right-radius: 100px;
+        border-bottom-left-radius: 100px;
+    }
+    
+    .image-3 {
+        width: 20%;
+        margin: 20px;
+        border-bottom-right-radius: 100px;
+        border-top-left-radius: 100px;
+    }
+    
+    .image-4 {
+        width: 20%;
+        margin: 20px;
+        border-top-right-radius: 100px;
+    }
+    
+    .image-5 {
+        width: 20%;
+        margin: 20px;
+        border-bottom-left-radius: 100px;
+    }
+    
+    .image-6 {
+        width: 20%;
+        margin: 20px;
+        border-top-right-radius: 100px;
+        border-bottom-left-radius: 100px;
+    }
+    
+    .image-7 {
+        width: 20%;
+        margin: 20px;
+        border-bottom-right-radius: 100px;
+        border-top-left-radius: 100px;
+    }
+    
+    .image-8 {
+        width: 20%;
+        margin: 20px;
+        border-bottom-right-radius: 100px;
+    } 
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .card-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* styling each image in the gallery page */
+    .image-1 {
+        width: 25%;
+        margin: 10px;
+        border-radius: 100px;
+    }
+
+    .image-2 {
+        width: 25%;
+        margin: 10px;
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+
+    .image-3 {
+        width: 25%;
+        margin: 10px;
+        border-top-right-radius: 50px;
+        border-top-left-radius: 50px;
+    }
+
+    .image-4 {
+        width: 25%;
+        margin: 10px;
+        border-top-right-radius: 50px;
+        border-top-left-radius: 50px;
+    }
+
+    .image-5 {
+        width: 25%;
+        margin: 10px;
+        border-radius: 50px;
+    }
+
+    .image-6 {
+        width: 25%;
+        margin: 10px;
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+
+    .image-7 {
+        width: 25%;
+        margin: 10px;
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+
+    .image-8 {
+        width: 25%;
+        margin: 10px;
+        border-bottom-left-radius: 50px;
+        border-top-left-radius: 50px;
+    }
+}
