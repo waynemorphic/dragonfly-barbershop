@@ -9,9 +9,8 @@ const Index = () => {
     <div className="home">
       <div className="home-page">
         <h3>
-          Find The Best Barber Shop{" "}
+          The Best Barber Shop{" "}
           <span>
-            <br />
             for you
           </span>
         </h3>
