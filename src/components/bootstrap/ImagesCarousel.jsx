@@ -12,7 +12,6 @@ export default function ImagesCarousel() {
             <img className="d-block w-100" src={barbercut} alt="barber shop image 1" />           
         </Carousel.Item>  
         `{console.log(Carousel.Item)}`
-     
 
         <Carousel.Item>
             <img className = "d-block w-100" src={shop} alt="barber shop image 2"/>
