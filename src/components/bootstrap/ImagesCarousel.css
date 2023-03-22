@@ -2,7 +2,7 @@
     width: 500px;
 }
 
-img{
+.carousel-images img{
     border-radius: 30px;
     border-top-left-radius: 60px;
     border-bottom-right-radius: 60px;
