@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Booking.css";
+import NavBar from "../navbar/NavBar";
 
 const Cart = () => {
   return (
@@ -29,7 +30,8 @@ const ManicureAndPedicure = ({ selectedOption }) => {
           <br />
           <p className="time">15 Minutes</p>
           <p>
-            Quick trimming and shaping of the nails, cuticle care, callus removal and hot towel wrap.
+            Quick trimming and shaping of the nails, cuticle care, callus
+            removal and hot towel wrap.
           </p>
         </label>
         <label>
@@ -38,7 +40,8 @@ const ManicureAndPedicure = ({ selectedOption }) => {
           <br />
           <p className="time">15 Minutes</p>
           <p>
-            Quick trimming and shaping of the nails, cuticle care, callus removal and hot towel wrap.
+            Quick trimming and shaping of the nails, cuticle care, callus
+            removal and hot towel wrap.
           </p>
         </label>
         <label>
@@ -68,11 +71,11 @@ const ManicureAndPedicure = ({ selectedOption }) => {
   );
 };
 
-const Facials = ({selectedOption}) => {
+const Facials = ({ selectedOption }) => {
   return (
     <div>
       <h3>Facials</h3>
-      <div className="selection" onChange = {selectedOption}>
+      <div className="selection" onChange={selectedOption}>
         <label>
           <input type="radio" value="500" />
           Mini Facial <span>KES 500</span>
@@ -109,11 +112,11 @@ const Facials = ({selectedOption}) => {
   );
 };
 
-const HairCuts = ({selectedOption, price}) => {
+const HairCuts = ({ selectedOption, price }) => {
   return (
     <div>
       <h3>Haircuts</h3>
-      <div className="selection" onChange = {selectedOption} >
+      <div className="selection" onChange={selectedOption}>
         <label>
           <input type="radio" value="1000" />
           Bespoke Cut <span>KES 1000</span>
@@ -164,27 +167,30 @@ const HairCuts = ({selectedOption, price}) => {
 };
 
 export default function Booking() {
-  const [price, setPrice] = useState([])
+  const [price, setPrice] = useState([]);
 
   // handle price of selected option
-  const handleOptionSelection = (event) => {        
-    setPrice(num => [...num, event.target.value])
-  }  
+  const handleOptionSelection = (event) => {
+    setPrice((num) => [...num, event.target.value]);
+  };
 
-  console.log("prices", price)
+  console.log("prices", price);
   return (
-    <div className="container-alignment">
-      <div>
-        <Navigator />
+    <section>
+      <NavBar />
+      <div className="container-alignment">
+        <div>
+          <Navigator />
+        </div>
+        <div>
+          <HairCuts selectedOption={handleOptionSelection} />
+          <Facials selectedOption={handleOptionSelection} />
+          <ManicureAndPedicure selectedOption={handleOptionSelection} />
+        </div>
+        <div>
+          <Cart />
+        </div>
       </div>
-      <div>
-        <HairCuts selectedOption = {handleOptionSelection} price = {price} />
-        <Facials selectedOption = {handleOptionSelection} />
-        <ManicureAndPedicure selectedOption = {handleOptionSelection} />
-      </div>
-      <div>
-        <Cart />
-      </div>
-    </div>
+    </section>
   );
 }
