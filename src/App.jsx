@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import Home from "./pages/home/Home";
 import Gallery from "./pages/gallery/Gallery";

@@ -1,4 +1,3 @@
-import React from "react";
 import "../home/Home.css";
 import ImagesCarousel from "../../components/bootstrap/ImagesCarousel";
 import NavBar from "../navbar/NavBar";
@@ -48,7 +47,7 @@ const Index = () => {
 
 export default function Home() {
   // handle booking click
-
+  
   return (
     <div>
       <NavBar />
