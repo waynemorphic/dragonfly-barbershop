@@ -1,16 +1,50 @@
 .carousel-images {
-    width: 500px;
+    width: 600px;
+    height: 370px;
 }
 
-.carousel-images img{
+.carousel-images img {
     border-radius: 30px;
     border-top-left-radius: 60px;
     border-bottom-right-radius: 60px;
 }
 
+.swiper {
+    width: 600px;
+    height: 400px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+
 /* media queries */
-@media screen and (max-width: 600px){
-    .carousel-images{
+@media screen and (max-width: 600px) {
+    .carousel-images {
         width: 372px;
+        height: 370px;
     }
+
+    .swiper {
+        width: 372px;
+        height: 400px;
+    }
+
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+    }
+
 }
