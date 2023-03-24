@@ -19,19 +19,20 @@ const Navigator = () => {
 };
 
 export default function Booking() {
-  const [booking, setBooking] = useState([])
-  console.log("booking",booking)
+  const [booking, setBooking] = useState([]);
+  const [loading, setLoading] = useState(true)
 
   // fetch data from local json file
   useEffect(() => {
     axios
-      .get("/db/db.json")
+      .get("/db/db.json")      
       .then((res) => setBooking(res.data))
-      .catch((err) => console.log(err))
-  }, [])
+      .then(setLoading(false))
+      .catch((err) => console.log(err));
+      console.log("fire me once")
+  }, []);
 
-  // const facials = Object.entries(booking)
-  console.log("booking data", booking)
+  if (booking.length !== 0 && !loading) console.log("booking data", booking[0].price)
 
   // handle price of selected option
   const handleOptionSelection = (event) => {
@@ -46,9 +47,12 @@ export default function Booking() {
           <Navigator />
         </div>
         <div>
-          <HairCuts selectedOption={handleOptionSelection} booking = {booking} />
-          <Facials selectedOption={handleOptionSelection} booking = {booking} />
-          <ManicureAndPedicure selectedOption={handleOptionSelection} booking = {booking} />
+          <HairCuts selectedOption={handleOptionSelection} booking={booking} />
+          <Facials selectedOption={handleOptionSelection} booking={booking} />
+          <ManicureAndPedicure
+            selectedOption={handleOptionSelection}
+            booking={booking}
+          />
         </div>
         <div>
           <Cart />
