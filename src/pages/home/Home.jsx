@@ -2,6 +2,7 @@ import "../home/Home.css";
 import ImagesCarousel from "../../components/bootstrap/ImagesCarousel";
 import NavBar from "../navbar/NavBar";
 import { Link } from "react-router-dom";
+import Footer from "../footer/Footer";
 
 const Index = () => {
   return (
@@ -52,6 +53,7 @@ export default function Home() {
     <div>
       <NavBar />
       <Index />
+      <Footer />
     </div>
   );
 }
