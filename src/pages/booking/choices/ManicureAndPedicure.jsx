@@ -1,13 +1,14 @@
-export default function ManicureAndPedicure ({ selectedOption }) {
+export default function ManicureAndPedicure ({ selectedOption, booking }) {
+  if (booking.length !== 0)
     return (
       <div>
         <h3>Hands/Feet</h3>
         <div className="selection" onChange={selectedOption}>
           <label>
             <input type="radio" value="800" />
-            Signature Hand Treatment <span>KES 800</span>
+            {booking[9].name} <span>KES {booking[9].price} </span>
             <br />
-            <p className="time">15 Minutes</p>
+            <p className="time">{booking[9].price}</p>
             <p>
               Quick trimming and shaping of the nails, cuticle care, callus
               removal and hot towel wrap.
@@ -15,9 +16,9 @@ export default function ManicureAndPedicure ({ selectedOption }) {
           </label>
           <label>
             <input type="radio" value="800" />
-            Signature Feet Treatment <span>KES 800</span>
+            {booking[10].name}  <span>KES {booking[10].price} </span>
             <br />
-            <p className="time">15 Minutes</p>
+            <p className="time">{booking[10].time}</p>
             <p>
               Quick trimming and shaping of the nails, cuticle care, callus
               removal and hot towel wrap.
@@ -25,9 +26,9 @@ export default function ManicureAndPedicure ({ selectedOption }) {
           </label>
           <label>
             <input type="radio" value="1000" />
-            Reventon Hand Treatment <span>KES 1000</span>
+            {booking[11].name}  <span>KES {booking[11].price} </span>
             <br />
-            <p className="time">30 Minutes</p>
+            <p className="time">{booking[11].time} </p>
             <p>
               Trimming and shaping of the nails, cuticle care, callus removal and
               sea salt skin exfoliation. Hot water soak, massage and hot towel
@@ -36,9 +37,9 @@ export default function ManicureAndPedicure ({ selectedOption }) {
           </label>
           <label>
             <input type="radio" value="1200" />
-            Reventon Feet Treatment <span>KES 1200</span>
+            {booking[12].name}<span>KES {booking[12].price} </span>
             <br />
-            <p className="time">45 Minutes</p>
+            <p className="time">{booking[12].time}</p>
             <p>
               Trimming and shaping of the nails, cuticle care, callus removal and
               sea salt skin exfoliation. Hot water soak, massage and hot towel

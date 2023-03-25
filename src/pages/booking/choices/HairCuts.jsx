@@ -1,52 +1,51 @@
 export default function HairCuts ({ selectedOption , booking}) {
-     console.log("data id", typeof booking)
-
+  if (booking.length !== 0)
     return (
       <div>
         <h3>Haircuts</h3>
         <div className="selection" onChange={selectedOption}>
           <label>
             <input type="radio" value="1000" />
-            Bespoke Cut <span>KES 1000</span>
+            {booking[0].name} <span>KES {booking[0].price}</span>
             <br />
-            <p className="time">1 Hr</p>
+            <p className="time">{booking[0].time}</p>
             <p>Personalized haircut. Hot towel treatment and styling.</p>
           </label>
           <label>
             <input type="radio" value="1200" />
-            Gentleman's Cut <span>KES 1200</span>
+            {booking[1].name}  <span>KES {booking[1].price} </span>
             <br />
-            <p className="time">1 Hr</p>
+            <p className="time">{booking[1].time} </p>
             <p>Classic gentleman's haircut. Hot towel treatment and styling.</p>
           </label>
           <label>
             <input type="radio" value="500" />
-            Beard/Mustache Trim <span>KES 500</span>
+            {booking[2].name} <span>KES {booking[2].price} </span>
             <br />
-            <p className="time">30 Minutes</p>
+            <p className="time">{booking[2].time}</p>
             <p>Personal trim for facial hair.</p>
           </label>
           <label>
             <input type="radio" value="1200" />
-            Ladies Fresh Cut <span>KES 1200</span>
+            {booking[3].name}  <span>KES {booking[3].price}</span>
             <br />
-            <p className="time">1 Hr</p>
+            <p className="time">{booking[3].time} </p>
             <p>
               Personalized haircut for ladies. Hot towel treatment and styling.
             </p>
           </label>
           <label>
             <input type="radio" value="300" />
-            Eye Brow Trim <span>KES 300</span>
+            {booking[4].name}  <span>KES {booking[4].price} </span>
             <br />
-            <p className="time">1 Hr</p>
+            <p className="time">{booking[4].time}</p>
             <p>Personalized eye brows trim.</p>
           </label>
           <label>
             <input type="radio" value="500" />
-            Young Man's Trim <span>KES 500</span>
+            {booking[5].name}  <span>KES {booking[5].price} </span>
             <br />
-            <p className="time">30 Minutes</p>
+            <p className="time">{booking[5].name} </p>
             <p>Personalized haircut for kids under 12 yrs.</p>
           </label>
         </div>
