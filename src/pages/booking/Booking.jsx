@@ -33,10 +33,14 @@ export default function Booking() {
 
   // handle, click event of selected option and retrieve the price 
   const handleOptionSelection = (event) => {
-    setPrices((num) => [...num, event.target.value]);    
+    booking.map(singleValue => {
+      if(parseInt(event.target.value) === parseInt(singleValue.price)){
+        setPrices(singleValue)
+      }
+    })
+
   };
 
-  console.log("choices", prices)
 
   return (
     <section>
