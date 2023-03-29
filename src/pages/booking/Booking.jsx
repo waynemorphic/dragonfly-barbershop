@@ -6,14 +6,21 @@ import Facials from "./choices/Facials";
 import ManicureAndPedicure from "./choices/ManicureAndPedicure";
 import Cart from "./checkout/Cart";
 import axios from "axios";
+import { HashLink as Link } from 'react-router-hash-link'
 
 // navigating between choices
 const Navigator = () => {
   return (
     <div className="navigation">
-      <button>Haircuts</button>
-      <button>Facials</button>
-      <button>Hands/Feet</button>
+      <Link to="#haircuts" smooth>
+        <button>Haircuts</button>
+      </Link>
+      <Link to="#facials" smooth>
+        <button href="#facials">Facials</button>
+      </Link>
+      <Link to="#manipedi" smooth>
+        <button>Hands/Feet</button>
+      </Link>
     </div>
   );
 };
@@ -48,8 +55,14 @@ export default function Booking() {
           <Navigator />
         </div>
         <div>
-          <HairCuts selectedOption={handleOptionSelection} booking={booking} />
-          <Facials selectedOption={handleOptionSelection} booking={booking} />
+          <HairCuts
+            selectedOption={handleOptionSelection}
+            booking={booking}
+          />
+          <Facials
+            selectedOption={handleOptionSelection}
+            booking={booking}
+          />
           <ManicureAndPedicure
             selectedOption={handleOptionSelection}
             booking={booking}
