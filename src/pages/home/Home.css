@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
 .home {
     display: flex;
     align-items: center;
@@ -7,14 +8,14 @@
     margin: 50px;
     max-width: 1200px;
     flex-direction: row;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
 }
 
 .home .home-page {
     text-align: left;
     max-width: 600px;
-    
+
 }
 
 /* homepage heading */
@@ -54,18 +55,17 @@
 }
 
 
-
 /* details on barbershop */
 .details {
     display: flex;
     align-items: baseline;
-    color: black;    
+    color: black;
 }
 
 /* details spanned word */
-.details span{
+.details span {
     color: #0FA98D;
-    font-size: 2rem;    
+    font-size: 2rem;
 }
 
 /* details headings */
@@ -80,6 +80,7 @@
     border-left-width: 2px;
     margin: 5px;
 }
+
 /* styling the image */
 .home .home-page-image {
     background-color: #7E7F81;
@@ -94,12 +95,23 @@
     float: left;
     width: 450px;
     height: auto;
-    margin: 10px;    
+    margin: 10px;
 }
 
+/* styling the video playback */
+.responsive-video {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    padding-bottom: 50%;
+    margin-left: 25%;
+    padding-top: 10%;
+    position: absolute;
+    height: 0;
+}
 
 /* media queries */
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
     .home {
         display: flex;
         margin: auto;
@@ -118,7 +130,7 @@
     }
 
     /* homepage heading */
-    .home-page h3 {        
+    .home-page h3 {
         font-size: 3rem;
     }
 
@@ -135,11 +147,11 @@
         align-items: center;
         color: black;
         margin-top: 20px;
-        margin-bottom: 20px;        
+        margin-bottom: 20px;
     }
 
     /* details spanned word */
-    .details span{
+    .details span {
         color: #0FA98D;
         font-size: 1.2rem;
     }
@@ -154,14 +166,14 @@
     /* image */
     .home-page .home-page-image .stack {
         display: flex;
-        flex-direction: row;           
-    
+        flex-direction: row;
+
     }
 
-        /* styling the image */
+    /* styling the image */
     .home .home-page-image {
         max-width: 300px;
-        width: 300px; 
+        width: 300px;
         display: flex;
         flex-direction: column;
     }
@@ -170,4 +182,20 @@
     .booking-button {
         margin-right: 40px;
     }
-  }
+
+    /* styling the video playback */
+    .responsive-video {
+        /* display: flex; */
+        /* justify-content: center; */
+        /* overflow: hidden; */
+        /* padding-bottom: 50%; */
+        /* margin-left: 25%; */
+        /* padding-top: 10%; */
+        position: static;
+        max-width: 500px;
+        margin-right: 20px;
+        margin-left: 10px;
+        padding-bottom: 10px;
+        height: 1%;
+    }
+}
