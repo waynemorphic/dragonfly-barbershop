@@ -2,7 +2,7 @@
 export default function Facials ({ selectedOption, booking }) {
   if (booking.length !== 0)
     return (
-      <div>
+      <div id = "facials">
         <h3>Facials</h3>
         <div className="selection" onChange={selectedOption}>
           <label>

@@ -1,7 +1,7 @@
 export default function HairCuts ({ selectedOption , booking}) {
   if (booking.length !== 0)
     return (
-      <div>
+      <div id = "#haircuts">
         <h3>Haircuts</h3>
         <div className="selection" onChange={selectedOption}>
           <label>
