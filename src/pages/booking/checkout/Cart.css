@@ -1,0 +1,32 @@
+.cart {
+    margin: 30px;
+}
+
+.cart span {
+    float: inline-end;
+    margin-left: 35px;
+    font-weight: bold;
+}
+
+.total {
+    border-top-width: 1px;
+    border-top-style: groove;
+    border-bottom-width: 1px;
+    border-bottom-style: groove;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* media query for small screens */
+@media screen and (max-width:600px) {
+    .cart {
+        margin: 10px;
+    }
+    .cart span {
+        /* justify-self: flex-end; */
+        margin-left: 5px;
+        /* float: inline-end; */
+        position:static;
+        font-weight: bold;
+    }
+}
