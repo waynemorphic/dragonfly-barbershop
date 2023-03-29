@@ -3,16 +3,15 @@ import ImagesCarousel from "../../components/bootstrap/ImagesCarousel";
 import NavBar from "../navbar/NavBar";
 import { Link } from "react-router-dom";
 import Footer from "../footer/Footer";
+import { useState } from "react";
+import ReactPlayer from "react-player";
 
-const Index = () => {
+const Index = ({ handleWatchVideo, clicked }) => {
   return (
     <div className="home">
       <div className="home-page">
         <h3>
-          The Best Barber Shop{" "}
-          <span>
-            for you
-          </span>
+          The Best Barber Shop <span>for you</span>
         </h3>
         <p className="objective">
           Haircut Services For Men and Women. We will pamper your Hair, Scalp,
@@ -24,9 +23,19 @@ const Index = () => {
               Book Now
             </button>
           </Link>
-          <button className="booking-button" type="submit">
+          <button
+            className="booking-button"
+            type="click"
+            onClick={handleWatchVideo}
+            src="https://www.youtube.com/watch?v=Gg4wtsWgw5k"
+          >
             Watch Video
           </button>
+          {clicked && (
+            <div className="responsive-video">
+              <ReactPlayer url="https://www.youtube.com/watch?v=Gg4wtsWgw5k" controls={true} playsinline={true}/>
+            </div>
+          )}
         </div>
 
         <div className="details">
@@ -34,7 +43,7 @@ const Index = () => {
             <span>+20 </span> <br /> Years of Experience
           </h4>
           <h4 className="lines">
-            <span>+80</span> <br /> Beauty Experts
+            <span>+15</span> <br /> Beauty Experts
           </h4>
           <h4 className="lines">
             <span>+20K</span> <br /> Happy Customers
@@ -47,12 +56,17 @@ const Index = () => {
 };
 
 export default function Home() {
-  // handle booking click
-  
+  // handle watch video
+  const [clicked, isClicked] = useState(false);
+
+  const handleWatchVideo = () => {
+    isClicked(true);
+  };
+
   return (
     <div>
       <NavBar />
-      <Index />
+      <Index handleWatchVideo={handleWatchVideo} clicked={clicked} />
       <Footer />
     </div>
   );
