@@ -1,4 +1,4 @@
-import React from "react";
+import "./Cart.css";
 
 export default function Cart({ prices }) {
   let totalCost = 0;
@@ -7,19 +7,21 @@ export default function Cart({ prices }) {
     return (
       <div>
         <h3>Cart</h3>
-        <ul>
+        <div className="cart">
           {prices.map((res) => (
-            <li key={res.id}>
-              {res.name}: {res.price}
-            </li>
+            <p key={res.id} >
+              {res.name} <span> {res.price}</span>
+            </p>
           ))}
-        </ul>
-        {prices.forEach((element) => {
-          totalCost += element.price;
-        })}
-        <p>Total: {totalCost}</p>
+          {prices.forEach((element) => {
+            totalCost += element.price;
+          })}
+          <p className="total">
+            Total <span>KES {totalCost} /=</span>{" "}
+          </p>
 
-        <button type="submit">Check Out</button>
+          <button type="submit">Check Out</button>
+        </div>
       </div>
     );
   }
