@@ -1,11 +1,4 @@
-import {
-  Container,
-  Nav,
-  Navbar,
-  NavDropdown,
-  Form,
-  Button,
-} from "react-bootstrap";
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import "./NavBar.css";
 import logo from "./../../assets/logo.png";
 
@@ -25,29 +18,16 @@ export default function NavBar() {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/gallery">Gallery</Nav.Link>
             <NavDropdown title="Services" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">
-                Haircuts
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
+              <NavDropdown.Item href="#action/3.1">Haircuts</NavDropdown.Item>
+              <NavDropdown.Item id="facials">
                 Facial Skincare
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">
                 Manicure & Pedicure
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="/booking">Book Now</Nav.Link>
+            {/* <Nav.Link href="/booking">Book Now</Nav.Link> */}
           </Nav>
-          {/* <Nav>
-            <Form className="d-flex">
-              <Form.Control
-                type="search"
-                placeholder="Enter Location"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-success">Search</Button>
-            </Form>
-          </Nav> */}
         </Navbar.Collapse>
       </Container>
     </Navbar>
