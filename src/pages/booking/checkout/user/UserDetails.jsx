@@ -1,40 +1,40 @@
 import Offcanvas from "react-bootstrap/Offcanvas";
 import "./UserDetails.css";
+import Calendar from "react-calendar";
+import { useState } from "react";
 
 export default function UserDetails({ handleClose, show }) {
+   const [value, onChange] = useState(new Date())
+
   return (
     <div>
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>Enter Your Details</Offcanvas.Header>
         <Offcanvas.Body className="form-area">
-          <form >
+          <form>
             <label>
               First Name
-              <input />
+              <input required/>
             </label>
             <label>
               Last Name
-              <input />
+              <input required/>
             </label>
             <label>
               Email Address
-              <input />
+              <input type="email" itemType="email" required/>
             </label>
             <label>
               Phone Number
-              <input />
+              <input required placeholder="+254"/>
             </label>
             <label>
               Location
-              <input />
-            </label>
-            <label>
-              Time
-              <input />
-            </label>
+              <input required/>
+            </label>            
             <label>
               Date
-              <input />
+              <Calendar onChange={onChange} value={value} activeStartDate = {new Date()} minDate = {new Date()}/>
             </label>
             <button type="submit" onClick={""} className="user-button">Book Now</button>
           </form>
