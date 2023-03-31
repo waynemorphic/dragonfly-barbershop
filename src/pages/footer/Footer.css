@@ -1,0 +1,11 @@
+.footer {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    font-style: normal;
+}
+
+.footer p {
+    font-family: 'Quicksand', sans-serif;
+}
