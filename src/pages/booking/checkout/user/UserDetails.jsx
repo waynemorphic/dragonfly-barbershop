@@ -1,33 +1,45 @@
-export default function UserDetails() {
+import Offcanvas from "react-bootstrap/Offcanvas";
+import "./UserDetails.css";
+
+export default function UserDetails({ handleClose, show }) {
   return (
     <div>
-        <form>
+      <Offcanvas show={show} onHide={handleClose}>
+        <Offcanvas.Header closeButton>Enter Your Details</Offcanvas.Header>
+        <Offcanvas.Body className="form-area">
+          <form >
             <label>
-               <input /> 
-               First Name
+              First Name
+              <input />
             </label>
             <label>
-               <input /> 
-               Last Name
+              Last Name
+              <input />
             </label>
             <label>
-               <input /> 
-               Email Address
+              Email Address
+              <input />
             </label>
             <label>
-               <input /> 
-               Phone Number
+              Phone Number
+              <input />
             </label>
             <label>
-               <input /> 
-               Time
+              Location
+              <input />
             </label>
             <label>
-               <input /> 
-               Date
+              Time
+              <input />
             </label>
-            <button type = "submit" onClick={""}></button>
-        </form>
+            <label>
+              Date
+              <input />
+            </label>
+            <button type="submit" onClick={""} className="user-button">Book Now</button>
+          </form>
+        </Offcanvas.Body>
+      </Offcanvas>
     </div>
-  )
+  );
 }
