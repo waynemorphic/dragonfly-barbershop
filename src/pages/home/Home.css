@@ -9,7 +9,6 @@
     max-width: 1200px;
     flex-direction: row;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
 }
 
 .home .home-page {
@@ -185,12 +184,6 @@
 
     /* styling the video playback */
     .responsive-video {
-        /* display: flex; */
-        /* justify-content: center; */
-        /* overflow: hidden; */
-        /* padding-bottom: 50%; */
-        /* margin-left: 25%; */
-        /* padding-top: 10%; */
         position: static;
         max-width: 500px;
         margin-right: 20px;
