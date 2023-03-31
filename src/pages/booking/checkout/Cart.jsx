@@ -28,11 +28,11 @@ export default function Cart({ prices }) {
           <p className="total">
             Total <span>KES {totalCost} /=</span>{" "}
           </p>
-          <button onClick={handleShow} type="click">
+          <button onClick={handleShow} type="click" className="checkout-button">
             Check Out
           </button>
-        </div>        
-        <UserDetails show = {show} handleClose = {handleClose} />
+        </div>
+        <UserDetails show={show} handleClose={handleClose} />
       </div>
     );
   }

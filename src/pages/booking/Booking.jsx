@@ -70,7 +70,7 @@ export default function Booking() {
         </div>
         <div>
           <Cart prices={prices} />
-        </div>
+        </div>        
       </div>
     </section>
   );
