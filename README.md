@@ -58,3 +58,6 @@ Inspired by dribbble.com
 
 ## FUTURE FEATURES
 Customer email notifications after a booking
+
+## CONTRIBUTORS
+[![GitHub Contributors](https://img.shields.io/github/contributors/waynemorphic/dragonfly-barbershop)](https://github.com/waynemorphic/dragonfly-barbershop/graphs/contributors)
