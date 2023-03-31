@@ -18,7 +18,7 @@
     padding: 10px; 
 }
 
-.form-area .user-button {
+.user-button {
     background-color: #0FA98D;
     color: white;
     font-size: 1.1rem;
@@ -33,7 +33,7 @@
     transition: border-color 0.25s;
 }
 
-.form-area button:hover {
+button:hover {
     color: white;
     background-color: #0FA98D;
     border-radius: 50px;
