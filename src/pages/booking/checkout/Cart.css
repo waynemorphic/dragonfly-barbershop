@@ -17,15 +17,27 @@
     padding-bottom: 10px;
 }
 
+.checkout-button {
+    background-color: #0FA98D;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    padding: 0.6em 1.2em;
+    margin-right: 50px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+
 /* media query for small screens */
 @media screen and (max-width:600px) {
     .cart {
         margin: 10px;
     }
     .cart span {
-        /* justify-self: flex-end; */
         margin-left: 5px;
-        /* float: inline-end; */
         position:static;
         font-weight: bold;
     }

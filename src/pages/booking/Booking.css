@@ -24,7 +24,7 @@
 }
 
 /* labels element */
-label {
+.container-alignment label {
     margin: 10px;
     padding: 10px;
     border-bottom-width: 1px;
@@ -33,7 +33,7 @@ label {
 }
 
 /* labels and input elements for sizes: radio & gaps */
-label input {
+.container-alignment label input {
     padding: 0px;
     margin: 10px;
     border-radius: 50px;
@@ -42,7 +42,7 @@ label input {
 }
 
 /* navigator buttons */
-button {
+ button {
     background-color: white;
     border: transparent;
     text-align: left;
@@ -50,7 +50,7 @@ button {
     padding: 10px;
 }
 
-button:hover {
+ button:hover {
     color: white;
     background-color: #0FA98D;
     border-radius: 50px;
@@ -109,7 +109,7 @@ button:hover {
     }
 
     /* labels element */
-    label {
+    .container-alignment label {
         margin: 1px;
         padding: 1px;
         border-bottom-width: 1px;
@@ -118,7 +118,7 @@ button:hover {
     }
 
     /* labels and input elements for sizes: radio & gaps */
-    label input {
+    .container-alignment label input {
         padding: 0px;
         margin: 10px;
         border-radius: 50px;
