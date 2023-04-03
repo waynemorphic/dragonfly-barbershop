@@ -1,41 +1,24 @@
 import Offcanvas from "react-bootstrap/Offcanvas";
 import "./UserDetails.css";
 import Calendar from "react-calendar";
-import { useState } from "react";
 
-export default function UserDetails({ handleClose, show }) {
-   const [value, onChange] = useState(new Date())
-   const [details, setDetails] = useState([])
-   const [fName, setFName] = useState()
-   const [lName, setLName] = useState()
-   const [email, setEmail] = useState()
-   const [phoneNumber, setPhoneNumber] = useState()
-   const [location, setLocation] = useState()
-
-   const handleSubmit = (event) => {
-      event.preventDefault()
-
-      const detailsObject = {
-         fName: fName,
-         lName: lName,
-         email: email,
-         phoneNumber: phoneNumber,
-         location: location
-      }  
-      setDetails(details.concat(detailsObject));
-   }
-
-   const handleFirstname = (event) => setFName(event.target.value)
-
-   const handleLastname = (event) => setLName(event.target.value)
-
-   const handleEmail = (event) => setEmail(event.target.value)
-
-   const handlePhonenumber = (event) => setPhoneNumber(event.target.value)
-
-   const handleLocation = (event) => setLocation(event.target.value)
-
-
+export default function UserDetails({
+  handleClose,
+  show,
+  handleSubmit,
+  handleFirstname,
+  handleLastname,
+  handleEmail,
+  handlePhonenumber,
+  handleLocation,
+  date,
+  setDate,
+  fname,
+  lname, 
+  email,
+  phonenumber,
+  location
+}) {
   return (
     <div>
       <Offcanvas show={show} onHide={handleClose}>
@@ -44,29 +27,47 @@ export default function UserDetails({ handleClose, show }) {
           <form onSubmit={handleSubmit}>
             <label>
               First Name
-              <input required onChange={handleFirstname} firstName = {fName} />
+              <input required onChange={handleFirstname} fname={fname} />
             </label>
             <label>
               Last Name
-              <input required onChange={handleLastname} lastName = {lName} />
+              <input required onChange={handleLastname} lname={lname} />
             </label>
             <label>
               Email Address
-              <input type="email" itemType="email" required onChange={handleEmail} email = {email}/>
+              <input
+                type="email"
+                itemType="email"
+                required
+                onChange={handleEmail}
+                email={email}
+              />
             </label>
             <label>
               Phone Number
-              <input required placeholder="+254" onChange={handlePhonenumber} phoneNumber = {phoneNumber} />
+              <input
+                required
+                placeholder="+254"
+                onChange={handlePhonenumber}
+                phonenumber={phonenumber}
+              />
             </label>
             <label>
               Location
-              <input required onChange={handleLocation} location = {location} />
-            </label>            
+              <input required onChange={handleLocation} location={location} />
+            </label>
             <label>
               Date
-              <Calendar onChange={onChange} value={value} activeStartDate = {new Date()} minDate = {new Date()}/>
+              <Calendar
+                onChange={setDate}
+                value={date}
+                activeStartDate={new Date()}
+                minDate={new Date()}
+              />
             </label>
-            <button type="submit" onClick={""} className="user-button">Book Now</button>
+            <button type="submit" className="user-button">
+              Book Now
+            </button>
           </form>
         </Offcanvas.Body>
       </Offcanvas>
