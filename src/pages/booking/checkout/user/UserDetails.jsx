@@ -37,7 +37,6 @@ export default function UserDetails({
               Email Address
               <input
                 type="email"
-                itemType="email"
                 required
                 onChange={handleEmail}
                 email={email}
