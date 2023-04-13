@@ -1,42 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
-
 .home {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    margin: 50px;
-    max-width: 1200px;
-    flex-direction: row;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 50px;
 }
 
-.home .home-page {
+.home-page {
     text-align: left;
     max-width: 600px;
 
 }
 
 /* homepage heading */
-.home-page h3 {
-    color: black;
+.home-page__heading {
     font-size: 4rem;
+    /* If possible import all fonts in html file at public folder */
     font-family: 'Quicksand', sans-serif;
+    line-height: 1.2;
 }
 
 /* heading spanned word */
-.home-page h3 span {
+.home-page__heading span {
     color: #0FA98D;
     font-family: 'Cookie', cursive;
+    font-size: 4.5rem;
 }
 
 /* shop objective */
 .objective {
-    color: black;
     font-size: 1.1rem;
-    line-height: 30px;
+    /* Dont use px for line height */
+    line-height:1.8;
 }
 
+.buttons {
+    margin: 35px 0;
+}
 
 /* buttons styling || booking and watch video */
 .booking-button {
@@ -58,7 +58,8 @@
 .details {
     display: flex;
     align-items: baseline;
-    color: black;
+    gap: 20px; /* Gap just incase they shrink in small devices */
+    justify-content: space-between;
 }
 
 /* details spanned word */
@@ -68,16 +69,19 @@
 }
 
 /* details headings */
-.details h4 {
-    padding: 10px;
+.details > h4 {
     font-size: 1.1rem;
     margin-top: 20px;
+    
 }
 
 .lines {
     border-left-style: groove;
     border-left-width: 2px;
-    margin: 5px;
+}
+
+.lines > span {
+    margin-left: 10px;
 }
 
 /* styling the image */
@@ -86,7 +90,8 @@
     /* transform: rotate(10deg); */
     border-radius: 150px;
     border-top-right-radius: 100px;
-    width: 200px;
+    /* Mostly use max-width for responsiveness */
+    max-width: 200px;
 }
 
 /* styling image to achieve a stacked images effect */

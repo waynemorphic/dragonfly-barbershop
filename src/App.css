@@ -1,17 +1,21 @@
-html{
-  box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+/* Have a container to control width for responsiveness */
+.App {
+  max-width: 1440px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 50px 0;
 }
 
+/* Font family defined in the body */
 body {
   background-color: white;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.App{
-  background-color: white;
-  margin: 20px;
-}
+/* Media Queries */
 
 @media screen and (max-width: 600px){
   .App {
