@@ -3,21 +3,22 @@
     font-size: 1.2rem;
 }
 
-
 .logo {
     width: 50px; 
-    margin-left: -1.5rem;   
+    height: 50px;
 }
 
 #nav-links {
     display: flex;    
     justify-content: end;
+    color: red;
 }
 
 #brand {
-    font-size: 1.2rem;
     font-family: 'Cookie', cursive;
-    display: flex;    
+    display: flex;   
+    justify-content: flex-end; 
     align-items: center;
     color: #0FA98D;
+    margin-left:  auto;
 }

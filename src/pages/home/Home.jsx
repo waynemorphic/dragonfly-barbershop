@@ -10,7 +10,7 @@ const Index = ({ handleWatchVideo, clicked }) => {
   return (
     <div className="home">
       <div className="home-page">
-        <h3>
+        <h3 className="home-page__heading">
           The Best Barber Shop <span>for you</span>
         </h3>
         <p className="objective">
