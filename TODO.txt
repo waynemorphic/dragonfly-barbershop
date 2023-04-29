@@ -1,0 +1,23 @@
+To-D0 Tasks
+1. Link the items in the Services dropdown to the booking page sectionally. 
+For instance, if Facial Skincare item, the item should be linked to the facials 
+section in the booking page.
+
+2. Add user details to a database and send email notifications to the customer
+after they checkout.
+
+3. Validate user data ie email and phone number. React Form Hook may be used in place 
+of the current form
+
+4. End to end tests of the application or alternatively unit tests per component if 
+necessary. For end tot end, Playwright framework will work while for unit tests, React 
+Testing Library or jest.js should be reliable
+
+5. Add another section in the home page. Could be cards that are descriptive of services 
+offered. When an item in the services navbar is clicked, the screen automaticlly scrolls
+down to the specific service description in the home page.
+
+6. CI with circle ci or github before deployment 
+
+7. Deployment. Vercel or any other hosting platform that hosts non static websites for free. 
+Will research on this further

@@ -6,7 +6,7 @@ import Facials from "./choices/Facials";
 import ManicureAndPedicure from "./choices/ManicureAndPedicure";
 import Cart from "./checkout/Cart";
 import axios from "axios";
-import { HashLink as Link } from 'react-router-hash-link'
+import { HashLink as Link } from "react-router-hash-link";
 
 // navigating between choices
 const Navigator = () => {
@@ -41,7 +41,6 @@ export default function Booking() {
   const handleOptionSelection = (event) => {
     booking.forEach((singleValue) => {
       if (event.target.name === singleValue.name) {
-        console.log("event", singleValue);
         setPrices(prices.concat(singleValue));
       }
     });
@@ -55,14 +54,8 @@ export default function Booking() {
           <Navigator />
         </div>
         <div>
-          <HairCuts
-            selectedOption={handleOptionSelection}
-            booking={booking}
-          />
-          <Facials
-            selectedOption={handleOptionSelection}
-            booking={booking}
-          />
+          <HairCuts selectedOption={handleOptionSelection} booking={booking} />
+          <Facials selectedOption={handleOptionSelection} booking={booking} />
           <ManicureAndPedicure
             selectedOption={handleOptionSelection}
             booking={booking}
@@ -70,7 +63,7 @@ export default function Booking() {
         </div>
         <div>
           <Cart prices={prices} />
-        </div>        
+        </div>
       </div>
     </section>
   );
