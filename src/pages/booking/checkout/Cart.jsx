@@ -1,37 +1,42 @@
 import "./Cart.css";
 import UserDetails from "./user/UserDetails";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import  emailjs from '@emailjs/browser'
+import toast , { Toaster } from 'react-hot-toast'
 
 export default function Cart({ prices }) {
   // state for offcanvas component and input elements
   const [show, setShow] = useState(false);
   const [details, setDetails] = useState([]);
-  const [date, setDate] = useState(new Date());
+  const [date, setDate] = useState('');
   const [fName, setFName] = useState('');
   const [lName, setLName] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [location, setLocation] = useState('');
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  // console.log("date", date.$d)
 
-    const detailsObject = {
-      fName: fName,
-      lName: lName,
-      email: email,
-      phoneNumber: phoneNumber,
-      location: location,
-    };
 
-    setDetails(details.concat(detailsObject));
-    setFName('')
-    setLName('')
-    setEmail('')
-    setPhoneNumber('')
-    setLocation('')
-    console.log("clicked")
-  };
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+
+  //   const detailsObject = {
+  //     fName: fName,
+  //     lName: lName,
+  //     email: email,
+  //     phoneNumber: phoneNumber,
+  //     location: location,
+  //   };
+
+  //   setDetails(details.concat(detailsObject));
+  //   setFName('')
+  //   setLName('')
+  //   setEmail('')
+  //   setPhoneNumber('')
+  //   setLocation('')
+  //   console.log("clicked")
+  // };
 
   // handling input events in offcanvas form
   const handleFirstname = (event) => setFName(event.target.value);
@@ -48,7 +53,27 @@ export default function Cart({ prices }) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const refForm = useRef();
+
+  // handling client email using emailjs
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      'service_c3esjqo',
+      'template_9ibfm6q',
+      refForm.current,
+      'cT7m1BUzeN3cqxCs_',{date: date.$d} )
+      .then((result) => {
+        toast.success("Booking successful. Check email")
+      }, (error) => {
+        console.log(error.text);
+      })
+  }
+
   let totalCost = 0;
+  prices.forEach((element) => totalCost += element.price)
+  console.log(totalCost)
 
   if (prices.length !== 0) {
     return (
@@ -57,8 +82,8 @@ export default function Cart({ prices }) {
         <div className="cart">
           {prices.map((res) => (
             <p key={res.id}>
-              {res.name} <span> {res.price}</span>              
-            </p>            
+              {res.name} <span> {res.price}</span>
+            </p>
           ))}
           {prices.forEach((element) => {
             totalCost += element.price;
@@ -73,7 +98,9 @@ export default function Cart({ prices }) {
         <UserDetails
           show={show}
           handleClose={handleClose}
-          handleSubmit={handleSubmit}
+          // handleSubmit={handleSubmit}
+          sendEmail={sendEmail}
+          refForm={refForm}
           handleFirstname={handleFirstname}
           handleLastname={handleLastname}
           handleEmail={handleEmail}
@@ -87,6 +114,7 @@ export default function Cart({ prices }) {
           phonenumber={phoneNumber}
           location={location}
         />
+        <Toaster position="top-right" reverseOrder={false} />
       </div>
     );
   }
