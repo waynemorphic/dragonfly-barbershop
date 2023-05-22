@@ -1,7 +1,7 @@
-# A BARBERSHOP WEB APPLICATION 
+# A BARBERSHOP WEB APPLICATION
 DragonFly is a reknown babrbershop in Nairobi, Kenya with various branches in the city's suburban areas. The goal of the web application is to primarily enable a seemless booking experience for its customers. By managing the customer flow, the operations manager will be able to allocate the workload to the beauty experts efficiently and reduce waiting time for the customers in the shop.
 
-## FEATURES 
+## FEATURES
 1. Homepage with a video courtesy of Savara
 2. Booking page with several services offered
 3. Checkout bar for user details
@@ -17,10 +17,12 @@ DragonFly is a reknown babrbershop in Nairobi, Kenya with various branches in th
 2. Swiper
 3. React bootstrap
 4. Bootstrap
-5. React calendar
-6. React player
-7. React router dom
-8. React router hash link
+5. React player
+6. React router dom
+7. React router hash link
+8. MUI DatePickers
+9. EmailJs
+10. React hot toast
 
 ## TESTING APP LOCALLY
 1. Clone the repository
@@ -49,9 +51,26 @@ DragonFly is a reknown babrbershop in Nairobi, Kenya with various branches in th
 
     `$ npm install --save react-router-hash-link`
 
+    `$ npm install @mui/x-date-pickers`
+
+    `$ npm install dayjs`
+
+    `$ npm install @mui/material @emotion/react @emotion/styled`
+
+    `$ npm install @mui/material @mui/styled-engine-sc styled-components`
+
+    `$ npm i emailjs`
+
+    `$ npm install react-hot-toast`
+
+
 4. Run the application
 
-    `$ yarn run dev`
+    `$ npm run dev`
+
+5. Expose to network and external devices
+
+    `$ npm run dev -- --host`
 
 ## DESIGN
 Inspired by dribbble.com
