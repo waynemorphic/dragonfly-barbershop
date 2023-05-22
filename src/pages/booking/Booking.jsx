@@ -30,10 +30,9 @@ export default function Booking() {
   const [prices, setPrices] = useState([]);
 
   // fetch data from local json file
-  // /db/db.json
   useEffect(() => {
     axios
-      .get("https://dragonfly-barbershop.vercel.app/db/db.json")
+      .get("/db/db.json")
       .then((res) => setBooking(res.data))
       .catch((err) => console.log(err));
   }, []);
