@@ -59,9 +59,7 @@ export default function Home() {
   // handle watch video
   const [clicked, isClicked] = useState(false);
 
-  const handleWatchVideo = () => {
-    isClicked(true);
-  };
+  const handleWatchVideo = () => isClicked(true);
 
   return (
     <div>
