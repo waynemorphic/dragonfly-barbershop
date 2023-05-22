@@ -4,6 +4,7 @@
     justify-content: space-between;
     gap: 50px;
     margin-top: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .home-page {
@@ -66,13 +67,16 @@
 .details span {
     color: #0FA98D;
     font-size: 2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
 }
 
 /* details headings */
 .details > h4 {
+    padding: 10px;
     font-size: 1.1rem;
     margin-top: 20px;
-    
+
 }
 
 .lines {

@@ -42,7 +42,7 @@
 }
 
 /* navigator buttons */
- button {
+.navigation button {
     background-color: white;
     border: transparent;
     text-align: left;
@@ -50,7 +50,7 @@
     padding: 10px;
 }
 
- button:hover {
+.navigation button:hover {
     color: white;
     background-color: #0FA98D;
     border-radius: 50px;
