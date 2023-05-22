@@ -17,27 +17,6 @@ export default function Cart({ prices }) {
 
   // console.log("date", date.$d)
 
-
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-
-  //   const detailsObject = {
-  //     fName: fName,
-  //     lName: lName,
-  //     email: email,
-  //     phoneNumber: phoneNumber,
-  //     location: location,
-  //   };
-
-  //   setDetails(details.concat(detailsObject));
-  //   setFName('')
-  //   setLName('')
-  //   setEmail('')
-  //   setPhoneNumber('')
-  //   setLocation('')
-  //   console.log("clicked")
-  // };
-
   // handling input events in offcanvas form
   const handleFirstname = (event) => setFName(event.target.value);
 
@@ -53,6 +32,7 @@ export default function Cart({ prices }) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  // useRef hook for sending email form
   const refForm = useRef();
 
   // handling client email using emailjs
@@ -72,8 +52,6 @@ export default function Cart({ prices }) {
   }
 
   let totalCost = 0;
-  prices.forEach((element) => totalCost += element.price)
-  console.log(totalCost)
 
   if (prices.length !== 0) {
     return (
@@ -98,7 +76,6 @@ export default function Cart({ prices }) {
         <UserDetails
           show={show}
           handleClose={handleClose}
-          // handleSubmit={handleSubmit}
           sendEmail={sendEmail}
           refForm={refForm}
           handleFirstname={handleFirstname}

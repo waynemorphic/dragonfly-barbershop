@@ -7,7 +7,6 @@ import { StaticDateTimePicker } from "@mui/x-date-pickers";
 export default function UserDetails({
   handleClose,
   show,
-  // handleSubmit,
   sendEmail,
   handleFirstname,
   handleLastname,
