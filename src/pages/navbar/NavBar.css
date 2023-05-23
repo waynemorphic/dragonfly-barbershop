@@ -21,3 +21,10 @@
     align-items: center;
     color: #0FA98D;
 }
+.dropdown-item {
+    width: 144px;
+}
+
+.dropdown-menu {
+    width: 180px;
+}

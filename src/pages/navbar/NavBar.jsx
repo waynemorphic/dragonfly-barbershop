@@ -17,9 +17,9 @@ export default function NavBar() {
             <Nav className="me-auto">
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="/gallery">Gallery</Nav.Link>
-              <NavDropdown title="Services" id="collasible-nav-dropdown">
+              <NavDropdown title="Services" id="collasible-nav-dropdown" className="dropdowns">
                 <NavDropdown.Item href="/booking#haircuts" id="haircuts">Haircuts</NavDropdown.Item>
-                <NavDropdown.Item href="/booking#facials" id="facials"> 
+                <NavDropdown.Item href="/booking#facials" id="facials">
                   Facial Skincare
                 </NavDropdown.Item>
                 <NavDropdown.Item href="/booking#manipedi">
