@@ -23,6 +23,7 @@ DragonFly is a reknown babrbershop in Nairobi, Kenya with various branches in th
 8. MUI DatePickers
 9. EmailJs
 10. React hot toast
+11. React spinners
 
 ## TESTING APP LOCALLY
 1. Clone the repository
@@ -62,6 +63,8 @@ DragonFly is a reknown babrbershop in Nairobi, Kenya with various branches in th
     `$ npm i emailjs`
 
     `$ npm install react-hot-toast`
+
+    `$ npm install --save react-spinners`
 
 
 4. Run the application
