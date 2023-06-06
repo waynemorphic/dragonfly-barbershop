@@ -7,7 +7,6 @@ import ManicureAndPedicure from "./choices/ManicureAndPedicure";
 import Cart from "./checkout/Cart";
 import axios from "axios";
 import { HashLink as Link } from "react-router-hash-link";
-import { async } from "rxjs";
 
 // navigating between choices
 const Navigator = () => {
