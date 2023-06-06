@@ -7,6 +7,7 @@ import ManicureAndPedicure from "./choices/ManicureAndPedicure";
 import Cart from "./checkout/Cart";
 import axios from "axios";
 import { HashLink as Link } from "react-router-hash-link";
+import { async } from "rxjs";
 
 // navigating between choices
 const Navigator = () => {
@@ -30,12 +31,28 @@ export default function Booking() {
   const [prices, setPrices] = useState([]);
 
   // fetch data from local json file
+  // useEffect(() => {
+  //   axios
+  //     .get("dist/db/db.json")
+  //     .then((res) => setBooking(res.data))
+  //     .catch((err) => console.log(err));
+  // }, []);
+
+
+
   useEffect(() => {
-    axios
-      .get("dist/db/db.json")
-      .then((res) => setBooking(res.data))
-      .catch((err) => console.log(err));
-  }, []);
+    (async ()=> {
+      try {
+        const res = await axios.get("dist/db/db.json")
+        setBooking(res.data)
+      } catch (error) {
+        console.error(error)
+      }
+      })()
+    },[])
+
+
+  console.log("booking",booking)
 
   // handle, click event of selected option and retrieve the price
   const handleOptionSelection = (event) => {
