@@ -42,16 +42,13 @@ export default function Booking() {
   useEffect(() => {
     (async ()=> {
       try {
-        const res = await axios.get("dist/db/db.json")
+        const res = await axios.get("db/db.json")
         setBooking(res.data)
       } catch (error) {
         console.error(error)
       }
       })()
     },[])
-
-
-  console.log("booking",booking)
 
   // handle, click event of selected option and retrieve the price
   const handleOptionSelection = (event) => {
