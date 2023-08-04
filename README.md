@@ -36,6 +36,10 @@ DragonFly is a reknown babrbershop in Nairobi, Kenya with various branches in th
 
 3. Install dependencies
 
+   `$ npm install`
+
+   Alternatively install one by one:
+
     `$ yarn add axios`
 
     `$ npm install swiper`
@@ -67,19 +71,32 @@ DragonFly is a reknown babrbershop in Nairobi, Kenya with various branches in th
     `$ npm install --save react-spinners`
 
 
-4. Run the application
+5. Run the application
 
     `$ npm run dev`
 
-5. Expose to network and external devices
+6. Expose to network and external devices
 
     `$ npm run dev -- --host`
 
 ## DESIGN
 Inspired by dribbble.com
 
-## FUTURE FEATURES
-Customer email notifications after a booking
+## Pipeline Features
+- [x] Customer email notifications after a booking
+- [ ] Resolve date booking bug in customer email notification
+- [ ] Resolve images bug in gallery page in prod
+ ```
+Solution: Use cloudinary
+```
+- [ ] Admin dashboard
+- [ ] Admin to view new bookings
+- [ ] Admin to check web traffic
+```
+Solution: Google analytics
+```
+- [ ] Admin to adjust menu prices
+      
 
 ## CONTRIBUTORS
 [![GitHub Contributors](https://img.shields.io/github/contributors/waynemorphic/dragonfly-barbershop)](https://github.com/waynemorphic/dragonfly-barbershop/graphs/contributors)
