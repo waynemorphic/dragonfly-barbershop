@@ -1,19 +1,21 @@
 import "./Cart.css";
 import UserDetails from "./user/UserDetails";
 import { useState, useRef } from "react";
-import  emailjs from '@emailjs/browser'
-import toast , { Toaster } from 'react-hot-toast'
+import {AiOutlineDelete} from 'react-icons/ai'
+import './Cart.css'
+import emailjs from "@emailjs/browser";
+import toast, { Toaster } from "react-hot-toast";
 
-export default function Cart({ prices }) {
+export default function Cart({ prices, removeBooking }) {
   // state for offcanvas component and input elements
   const [show, setShow] = useState(false);
   const [details, setDetails] = useState([]);
-  const [date, setDate] = useState('');
-  const [fName, setFName] = useState('');
-  const [lName, setLName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
-  const [location, setLocation] = useState('');
+  const [date, setDate] = useState("");
+  const [fName, setFName] = useState("");
+  const [lName, setLName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [location, setLocation] = useState("");
 
   // console.log("date", date.$d)
 
@@ -39,17 +41,23 @@ export default function Cart({ prices }) {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(
-      'service_c3esjqo',
-      'template_9ibfm6q',
-      refForm.current,
-      'cT7m1BUzeN3cqxCs_',{date: date.$d} )
-      .then((result) => {
-        toast.success("Booking successful. Check email")
-      }, (error) => {
-        console.log(error.text);
-      })
-  }
+    emailjs
+      .sendForm(
+        "service_c3esjqo",
+        "template_9ibfm6q",
+        refForm.current,
+        "cT7m1BUzeN3cqxCs_",
+        { date: date.$d }
+      )
+      .then(
+        (result) => {
+          toast.success("Booking successful. Check email");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
   let totalCost = 0;
 
@@ -59,9 +67,14 @@ export default function Cart({ prices }) {
         <h3>Cart</h3>
         <div className="cart">
           {prices.map((res) => (
-            <p key={res.id}>
-              {res.name} <span> {res.price}</span>
-            </p>
+            <div key={res.id} className="cart-item">
+              <p>
+                {res.name} <span> {res.price}</span>
+              </p>
+              <button type="button" onClick={() => removeBooking(res.name)} className="delete-btn">
+                <AiOutlineDelete />
+              </button>
+            </div>
           ))}
           {prices.forEach((element) => {
             totalCost += element.price;

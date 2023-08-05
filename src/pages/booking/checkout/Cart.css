@@ -1,10 +1,13 @@
 .cart {
     margin: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .cart span {
     float: inline-end;
-    margin-left: 35px;
+    margin-left: 24px;
     font-weight: bold;
 }
 
@@ -36,9 +39,35 @@
     .cart {
         margin: 10px;
     }
+
     .cart span {
         margin-left: 5px;
-        position:static;
+        position: static;
         font-weight: bold;
     }
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart-item p{
+    margin: 0;
+}
+
+.delete-btn{
+    margin-left: 12px;
+    border: none;
+    background: none;
+
+
+}
+
+.delete-btn svg{
+    line-height: 1;
+    width: 18px;
+    height: 18px;
+    color: #666;
 }
