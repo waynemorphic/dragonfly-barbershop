@@ -64,6 +64,10 @@
     margin-left: 10px;
 }
 
+.selection label {
+    cursor: pointer;
+}
+
 /* span element for prices */
 .selection span {
     font-weight: bold;
@@ -128,3 +132,47 @@
 
 
 }
+
+
+.radio-btn {
+    height: 20px;
+    width: 20px;
+    border: 2px solid #838383;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+}
+
+.radio-btn::after {
+    content: '';
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background-color: #838383;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+.radio-input:checked~.radio-btn::after {
+    opacity: 1;
+}
+
+.radio-input {
+    display: none
+}
+
+.radio-btn-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.radio-btn-box .name-and-price,
+.desc {
+    user-select: none;
+}
+
