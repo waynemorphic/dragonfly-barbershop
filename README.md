@@ -95,7 +95,7 @@ We have curated ToDo's 🗒️ that might interest you. Check them out and creat
 - [x] Fix bug in the Hover of the dropdown of Navigation Links
 - [x] Validate user data ie email and phone number. React Form Hook may be used in place 
 of the current form
-- [ ] Customer to unselect the selected input radio after user has selected in booking page.
+- [x] Customer to unselect the selected input radio after user has selected in booking page.
 - [ ] Add more details in the landing page. Could be cards that are descriptive of services 
 offered. When an item in the services navbar is clicked, the screen automaticlly scrolls
 down to the specific service description in the home page.
