@@ -26,13 +26,14 @@ const RadioButton = ({ name, price, time, desc, toggleBooking, isInCart }) => {
         />
 
         <span className="radio-btn"></span>
-        <div className="name-and-price">
-          {name} <span>KES {price}</span>
+        <div className="name">
+          {name}
         </div>
       </div>
       <br />
       <p className="time">{time}</p>
       <p className="desc">{desc}</p>
+      <p className="price">KES {price}/=</p>
     </label>
   );
 };

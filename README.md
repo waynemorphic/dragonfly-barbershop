@@ -80,10 +80,15 @@ DragonFly is a reknown babrbershop in Nairobi, Kenya with various branches in th
     `$ npm run dev -- --host`
 
 ## DESIGN
-Inspired by dribbble.com
+Inspired by [dribbble.com](https://dribbble.com/shots/19178694-Echo-Barber-haircut-landing)
+
 
 ## Contributing
-We have curated ToDo's 🗒️ that might interest you. Check them out and create an issue, with the issue title being the particular list item in the ToDo list. That means you will have self assigned the issue. Happy hacking 💻
+We have curated ToDo's 🗒️ that might interest you. Check them out and create an issue, with the issue title being the particular list item in the ToDo list. That means you will have self assigned the issue. 
+
+Remember to push to `dev` branch. 
+
+Happy hacking 💻
 
 ## TODO
 - [x] Make the footer text to be always at the bottom of the page.
