@@ -68,12 +68,6 @@
     cursor: pointer;
 }
 
-/* span element for prices */
-.selection span {
-    font-weight: bold;
-    float: inline-end;
-}
-
 /* muted color for time */
 .time {
     color: gray;
@@ -129,11 +123,9 @@
         transform: scale(2);
         margin-bottom: 15px;
     }
-
-
 }
 
-
+/*RadioButton component styling*/
 .radio-btn {
     height: 20px;
     width: 20px;
@@ -148,7 +140,7 @@
     height: 14px;
     width: 14px;
     border-radius: 50%;
-    background-color: #838383;
+    background-color: #0FA98D;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -171,8 +163,12 @@
     gap: 12px;
 }
 
-.radio-btn-box .name-and-price,
+.radio-btn-box .name, .price,
 .desc {
     user-select: none;
 }
 
+.price {
+    font-weight: bold;
+    text-align: right;
+}
