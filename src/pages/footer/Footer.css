@@ -1,6 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 .footer {
     display: flex;
+    flex-direction: column;
     text-align: center;
     justify-content: center;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+.reviews{
+    padding-right: 40px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    
+    color: white;
+}
+
+.wayne{
+    margin-top: -15px;
+}
+.heading{
+    padding: 50px;
+    text-rendering: geometricPrecision;
+    padding-bottom: -20px;
+}
+.name{
+    margin-top: -45px;
+    font-size: 11px;
+}
+
+.reviews-container{
+    background-color: #0fa98d;
+    border-radius: 20px;
+    transition: transform 300ms ease;
+}
+.reviews-container:hover{
+    transform: translateY(-10px);
+    cursor: pointer;
 }
