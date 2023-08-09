@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Footer from "../footer/Footer";
 import { useState } from "react";
 import ReactPlayer from "react-player";
+import Services from "../services/Services";
 
 const Index = ({ handleWatchVideo, clicked }) => {
   return (
@@ -65,6 +66,7 @@ export default function Home() {
     <div>
       <NavBar />
       <Index handleWatchVideo={handleWatchVideo} clicked={clicked} />
+      <Services />
       <Footer />
     </div>
   );
