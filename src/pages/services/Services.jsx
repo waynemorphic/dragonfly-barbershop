@@ -13,7 +13,7 @@ export default function Services() {
 
   return (
     <div className="services">
-      <span className="leading-text">Our Services</span>
+      {/* <span className="leading-text">Our Services</span> */}
       <h2>Our Barber <span>Services</span></h2>
       <div className="service-card-container">
         <div className="service-card"
@@ -35,10 +35,10 @@ export default function Services() {
               src={facial}
               alt="Facial Skincare" />
           </figure>
+          <h3>Facial Skincare</h3>
           <p>
             Full style and cut to suit your face shape, proffessionally styled
           </p>
-          <h3>Facial Skincare</h3>
         </div>
         <div className="service-card"
          onClick={() => navigate("/booking#manipedi")}>

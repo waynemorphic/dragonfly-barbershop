@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Footer from "../footer/Footer";
 import { useState } from "react";
 import ReactPlayer from "react-player";
-import Services from "../../components/services/Services";
+import Services from "../services/Services";
 
 const Index = ({ handleWatchVideo, clicked }) => {
   return (
