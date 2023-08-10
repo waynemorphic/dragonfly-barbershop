@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-
+import React, { useEffect } from 'react';
 import facial from "../../assets/facial.png";
 import haircut from "../../assets/haircut.png";
 import pedicure from "../../assets/pedicure.png";
@@ -8,7 +8,10 @@ import pedicure from "../../assets/pedicure.png";
 import "./Services.css";
 
 export default function Services() {
-
+  useEffect(() => {
+    document.title = 'Home - DRAGONFLY BARBERSHOP';
+  }, []);
+  
   const navigate = useNavigate()
 
   return (
