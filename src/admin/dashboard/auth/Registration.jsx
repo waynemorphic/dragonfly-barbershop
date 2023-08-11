@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { LockOutlined, UserOutlined, MailOutlined } from "@ant-design/icons";
-import { Button, Checkbox, Form, Input } from "antd";
+import { Button, Form, Input } from "antd";
 import "./Auth.css";
 import logo from "@assets/logo.png";
 
 export default Registration => {
-  
+
   // Form handler fired after every input field is entered
   const handleRegistration = event => {
     console.log(event)
