@@ -69,7 +69,7 @@ export default function Cart({ prices, removeBooking }) {
           {prices.map((res) => (
             <div key={res.id} className="cart-item">
               <p>
-                {res.name} <span> {res.price}</span>
+                {res.name} <span> KES {res.price} /=</span>
               </p>
               <button type="button" onClick={() => removeBooking(res.name)} className="delete-btn">
                 <AiOutlineDelete />
