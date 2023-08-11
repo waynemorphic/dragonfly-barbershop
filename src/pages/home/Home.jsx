@@ -1,13 +1,18 @@
+import React, { useEffect } from 'react';
 import "../home/Home.css";
-import ImagesCarousel from "../../components/bootstrap/ImagesCarousel";
-import NavBar from "../navbar/NavBar";
+import ImagesCarousel from "@components/bootstrap/ImagesCarousel";
+import NavBar from "@pages/navbar/NavBar";
 import { Link } from "react-router-dom";
-import Footer from "../footer/Footer";
+import Footer from "@pages/footer/Footer";
 import { useState } from "react";
 import ReactPlayer from "react-player";
-import Services from "../services/Services";
+import Services from "@pages/services/Services";
 
 const Index = ({ handleWatchVideo, clicked }) => {
+  useEffect(() => {
+    document.title = 'Home - DRAGONFLY BARBERSHOP';
+  }, []);
+
   return (
     <div className="home">
       <div className="home-page">

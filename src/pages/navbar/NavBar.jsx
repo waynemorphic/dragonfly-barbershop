@@ -1,6 +1,6 @@
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import "./NavBar.css";
-import logo from "./../../assets/logo.png";
+import logo from "@assets/logo.png";
 
 export default function NavBar() {
   return (
@@ -26,7 +26,7 @@ export default function NavBar() {
                   Manicure & Pedicure
                 </NavDropdown.Item>
               </NavDropdown>
-              {/* <Nav.Link href="/booking">Book Now</Nav.Link> */}
+              <Nav.Link href="/admin/login">Admin</Nav.Link>
             </Nav>
           </Navbar.Collapse>
       </Navbar>
