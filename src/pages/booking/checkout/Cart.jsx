@@ -1,7 +1,7 @@
 import "./Cart.css";
 import UserDetails from "./user/UserDetails";
 import { useState, useRef } from "react";
-import {AiOutlineDelete} from 'react-icons/ai'
+import { AiOutlineDelete } from "react-icons/ai";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
 
@@ -69,7 +69,11 @@ export default function Cart({ prices, removeBooking }) {
               <p>
                 {res.name} <span> KES {res.price} /=</span>
               </p>
-              <button type="button" onClick={() => removeBooking(res.name)} className="delete-btn">
+              <button
+                type="button"
+                onClick={() => removeBooking(res.name)}
+                className="delete-btn"
+              >
                 <AiOutlineDelete />
               </button>
             </div>
