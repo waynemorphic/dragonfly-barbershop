@@ -1,10 +1,15 @@
+
+import React, { useEffect } from 'react';
 import barbercut from "@assets/barbercut.png";
 import shop from "@assets/shop.jpg";
-
 import "./Gallery.css";
 import NavBar from "@pages/navbar/NavBar";
 
 export default function Gallery() {
+  useEffect(() => {
+    document.title = 'Gallery - DRAGONFLY BARBERSHOP';
+  }, []);
+
   return (
     <section>
       <NavBar />
