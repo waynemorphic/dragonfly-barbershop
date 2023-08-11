@@ -2,14 +2,12 @@ import "./Cart.css";
 import UserDetails from "./user/UserDetails";
 import { useState, useRef } from "react";
 import {AiOutlineDelete} from 'react-icons/ai'
-import './Cart.css'
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
 
 export default function Cart({ prices, removeBooking }) {
   // state for offcanvas component and input elements
   const [show, setShow] = useState(false);
-  const [details, setDetails] = useState([]);
   const [date, setDate] = useState("");
   const [fName, setFName] = useState("");
   const [lName, setLName] = useState("");
