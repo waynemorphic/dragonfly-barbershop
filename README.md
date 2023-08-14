@@ -101,7 +101,7 @@ Happy hacking 💻
 - [x] Validate user data ie email and phone number. React Form Hook may be used in place 
 of the current form
 - [x] Customer to unselect the selected input radio after user has selected in booking page.
-- [ ] Add more details in the landing page. Could be cards that are descriptive of services 
+- [x] Add more details in the landing page. Could be cards that are descriptive of services 
 offered. When an item in the services navbar is clicked, the screen automaticlly scrolls
 down to the specific service description in the home page.
 - [ ] Better footer section
@@ -114,7 +114,7 @@ Testing Library or jest.js should be reliable
 
 ## Pipeline Features
 - [x] Customer email notifications after a booking
-- [ ] Resolve images bug in gallery page in prod
+- [x] Resolve images bug in gallery page in prod
  ```
 Solution: Use cloudinary
 ```
