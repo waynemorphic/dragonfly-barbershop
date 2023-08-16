@@ -30,18 +30,24 @@ const Index = ({ handleWatchVideo, clicked }) => {
             </button>
           </Link>
           <button
+            id='watchBtn'
             className="booking-button"
             type="click"
             onClick={handleWatchVideo}
             src="https://www.youtube.com/watch?v=Gg4wtsWgw5k"
           >
-            Watch Video
+            {clicked ? "Close Video" : "Watch Video"}
           </button>
-          {clicked && (
+          {clicked ? (
             <div className="responsive-video">
-              <ReactPlayer url="https://www.youtube.com/watch?v=Gg4wtsWgw5k" controls={true} playsinline={true}/>
+              <ReactPlayer url="https://www.youtube.com/watch?v=Gg4wtsWgw5k" controls={true} playsinline={true} />
+              <button type="button" className="btn-close mx-2" aria-label="Close" onClick={handleWatchVideo}></button>
             </div>
-          )}
+          ) :
+            <div className="responsive-video">
+
+            </div>
+          }
         </div>
 
         <div className="details">
@@ -65,7 +71,17 @@ export default function Home() {
   // handle watch video
   const [clicked, isClicked] = useState(false);
 
-  const handleWatchVideo = () => isClicked(true);
+  const handleWatchVideo = () => isClicked(prevValue => !prevValue);
+
+  const responsiveVideoDiv = document.querySelector('.responsive-video')
+  const watchBtn = document.querySelector('#watchBtn')
+  document.addEventListener('click', e => {
+    if (clicked && e.target !== watchBtn) {
+      if (e.target !== responsiveVideoDiv) {
+        isClicked(false)
+      }
+    }
+  })
 
   return (
     <div>

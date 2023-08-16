@@ -124,6 +124,12 @@
     height: 0;
 }
 
+.responsive-video .btn-close {
+    width: 1.5em;
+    height: 1.5em;
+    background-size: contain;
+}
+
 /* media queries */
 @media screen and (max-width: 600px) {
     .home {
@@ -205,5 +211,11 @@
         margin-left: 10px;
         padding-bottom: 10px;
         height: 1%;
+        flex-direction: column-reverse;
+    }
+
+    .responsive-video .btn-close {
+        margin: 1em 0;
+        width: 100%;
     }
 }
