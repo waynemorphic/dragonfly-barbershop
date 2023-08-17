@@ -2,7 +2,7 @@
 /* can be moved to app or index css */
 /* #root{
     background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,254,254,1) 30%, rgba(243,236,228,1) 100%); 
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,254,254,1) 30%, rgba(243,236,228,1) 100%);
   }
  */
 .home {
@@ -127,40 +127,7 @@
 }
 
 .responsive-video .closeBtn {
-    overflow: hidden;
-    position: relative;
-    border: none;
-    padding: 0;
-    width: 3em;
-    height: 3em;
-    border-radius: .5em;
-    background: #0FA98D;
-    color: #fff;
-    font: inherit;
-    text-indent: 100%;
-    cursor: pointer;
-
-    &:focus {
-        outline: solid 0 transparent;
-        box-shadow: 0 0 0 2px #000
-    }
-
-    &:before,
-    &:after {
-        position: absolute;
-        top: 15%;
-        left: calc(50% - .0625em);
-        width: .125em;
-        height: 70%;
-        border-radius: .125em;
-        transform: rotate(45deg);
-        background: currentcolor;
-        content: ''
-    }
-
-    &:after {
-        transform: rotate(-45deg);
-    }
+    color: red;
 }
 
 /* media queries */
@@ -240,21 +207,22 @@
     .responsive-video {
         position: static;
         max-width: 500px;
-        margin-right: 20px;
-        margin-left: 10px;
+        margin-right: 1px;
+        margin-left: 1px;
         padding-bottom: 10px;
         height: 1%;
-        flex-direction: column-reverse;
+        flex-direction: row;
     }
 
-    .responsive-video .closeBtnHolder {
-        width: 100%;
+    .closeBtnHolder {
+        width: 50%;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: start;
+        align-items: start;
     }
 
-    .responsive-video .closeBtn {
-        margin: 1em 0;
+    .closeBtn {
+        margin: 0em 0;
+        flex-direction: row;
     }
 }
