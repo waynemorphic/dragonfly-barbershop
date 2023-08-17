@@ -1,10 +1,10 @@
 /* Page gradient */
 /* can be moved to app or index css */
-#root{
+/* #root{
     background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,254,254,1) 30%, rgba(243,236,228,1) 100%); 
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,254,254,1) 30%, rgba(243,236,228,1) 100%);
   }
-
+ */
 .home {
     display: flex;
     align-items: center;
@@ -39,7 +39,7 @@
 .objective {
     font-size: 1.1rem;
     /* Dont use px for line height */
-    line-height:1.8;
+    line-height: 1.8;
 }
 
 .buttons {
@@ -66,7 +66,8 @@
 .details {
     display: flex;
     align-items: baseline;
-    gap: 20px; /* Gap just incase they shrink in small devices */
+    gap: 20px;
+    /* Gap just incase they shrink in small devices */
     justify-content: space-between;
 }
 
@@ -75,11 +76,10 @@
     color: #0FA98D;
     font-size: 2rem;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
 }
 
 /* details headings */
-.details > h4 {
+.details>h4 {
     padding: 10px;
     font-size: 1.1rem;
     margin-top: 20px;
@@ -91,7 +91,7 @@
     border-left-width: 2px;
 }
 
-.lines > span {
+.lines>span {
     margin-left: 10px;
 }
 
@@ -123,6 +123,11 @@
     padding-top: 10%;
     position: absolute;
     height: 0;
+    z-index: 999;
+}
+
+.responsive-video .closeBtn {
+    color: red;
 }
 
 /* media queries */
@@ -202,9 +207,22 @@
     .responsive-video {
         position: static;
         max-width: 500px;
-        margin-right: 20px;
-        margin-left: 10px;
+        margin-right: 1px;
+        margin-left: 1px;
         padding-bottom: 10px;
         height: 1%;
+        flex-direction: row;
+    }
+
+    .closeBtnHolder {
+        width: 50%;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .closeBtn {
+        margin: 0em 0;
+        flex-direction: row;
     }
 }
