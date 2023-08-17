@@ -41,7 +41,9 @@ const Index = ({ handleWatchVideo, clicked }) => {
           {clicked ? (
             <div className="responsive-video">
               <ReactPlayer url="https://www.youtube.com/watch?v=Gg4wtsWgw5k" controls={true} playsinline={true} />
-              <button type="button" className="btn-close mx-2" aria-label="Close" onClick={handleWatchVideo}></button>
+              <div className='closeBtnHolder'>
+                <button type="button" className="closeBtn mx-2" aria-label="Close" onClick={handleWatchVideo}></button>
+              </div>
             </div>
           ) :
             <div className="responsive-video">
